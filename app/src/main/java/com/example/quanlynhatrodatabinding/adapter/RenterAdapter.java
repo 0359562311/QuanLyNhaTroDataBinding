@@ -6,10 +6,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quanlynhatrodatabinding.databinding.ItemRenterBinding;
+import com.example.quanlynhatrodatabinding.model.Renter;
+
+import java.util.List;
 
 public class RenterAdapter extends RecyclerView.Adapter<RenterAdapter.ViewHolder> {
 
-
+    List<Renter> list;
 
     @NonNull
     @Override
