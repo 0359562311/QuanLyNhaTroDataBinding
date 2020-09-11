@@ -2,12 +2,54 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <variable
+            name="renter"
+            type="com.example.quanlynhatrodatabinding.model.Renter" />
 
+        <variable
+            name="onClick"
+            type="com.example.quanlynhatrodatabinding.OnItemClickHandler" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FAE6E6E2"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/renter_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:text="@{renter.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/renter_id"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:text="@{renter.id}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:onClick="@{(v)->onClick.openPopupMenu(v,renter)}"
+            android:id="@+id/btn_popup_menu_renter"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_action_name"
+            android:layout_weight="1.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </layout>

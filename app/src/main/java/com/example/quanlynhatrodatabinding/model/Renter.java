@@ -9,13 +9,10 @@ public class Renter {
     @SerializedName("name")
     private String name;
 
-    @SerializedName("endDate")
-    private String endDate;
 
-    public Renter(String id, String name, String endDate) {
+    public Renter(String id, String name) {
         this.id = id;
         this.name = name;
-        this.endDate = endDate;
     }
 
     public String getId() {
@@ -26,7 +23,4 @@ public class Renter {
         return name;
     }
 
-    public String getEndDate() {
-        return endDate;
-    }
 }
